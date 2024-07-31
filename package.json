@@ -1,0 +1,24 @@
+{
+    "name": "beer-rating(node)",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start-db": "docker build -t test_db . && docker run -p 3307:3306 -d test_db",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "set MYSQL_ROOT_PASSWORD=rootpassword&& set MYSQL_DATABASE=mydatabase&& set MYSQL_USER=myuser&& set MYSQL_PASSWORD=mypassword&& node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.19.2",
+        "joi": "^17.13.3",
+        "mysql2": "^3.11.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.4"
+    }
+}
